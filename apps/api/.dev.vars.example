@@ -1,0 +1,2 @@
+DATABASE_URL=postgresql://user:password@ep-xxx.region.aws.neon.tech/garage?sslmode=require
+JWT_SECRET=change-me-to-a-long-random-secret

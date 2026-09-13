@@ -1,0 +1,19 @@
+name = "garage-api"
+main = "src/index.ts"
+compatibility_date = "2025-03-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Create bucket in Cloudflare dashboard first, then this binding works.
+# Dashboard → R2 → Create bucket → name: garage-images
+[[r2_buckets]]
+binding = "IMAGES_BUCKET"
+bucket_name = "garage-images"
+
+# Secrets:
+#   wrangler secret put DATABASE_URL
+#   wrangler secret put JWT_SECRET
+#
+# Local: copy .dev.vars.example → .dev.vars
+
+[vars]
+ENVIRONMENT = "development"

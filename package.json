@@ -1,0 +1,25 @@
+{
+  "name": "garage-pwa",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Vehicle Garage Services Management",
+  "scripts": {
+    "dev:web": "pnpm --filter @garage/web dev",
+    "dev:api": "pnpm --filter @garage/api dev",
+    "build:web": "pnpm --filter @garage/web build",
+    "build:api": "pnpm --filter @garage/api build",
+    "db:generate": "pnpm --filter @garage/database generate",
+    "db:push": "pnpm --filter @garage/database push",
+    "db:studio": "pnpm --filter @garage/database studio",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "db:seed": "pnpm --filter @garage/database seed"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "devDependencies": {
+    "@types/ws": "^8.18.1"
+  }
+}
