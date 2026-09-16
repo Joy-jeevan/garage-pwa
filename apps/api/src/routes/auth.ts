@@ -115,7 +115,7 @@ authRoute.post("/login", zValidator("json", loginSchema), async (c) => {
 
 // GET /auth/me
 authRoute.get("/me", requireAuth, async (c) => {
-  const authUser = c.get("user");
+  const authUser = c.get("user") as AuthUser;
   const prisma = await getPrisma(c.env.DATABASE_URL || process.env.DATABASE_URL);
 
   const user = await prisma.user.findUnique({

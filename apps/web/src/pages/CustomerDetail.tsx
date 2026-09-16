@@ -58,7 +58,7 @@ export default function CustomerDetailPage() {
           <h1 className="text-2xl font-bold tracking-tight">
             {customer.fullName}
           </h1>
-          <p className="text-sky-400 font-mono text-lg mt-1">{customer.mobile}</p>
+          <p className="text-brand-400 font-mono text-lg mt-1">{customer.mobile}</p>
           {customer.email && (
             <p className="text-sm text-slate-400 mt-0.5">{customer.email}</p>
           )}
@@ -99,7 +99,7 @@ export default function CustomerDetailPage() {
           <h2 className="text-lg font-semibold">Vehicles</h2>
           <button
             onClick={() => setShowVehicleForm(true)}
-            className="text-sm text-sky-400 hover:underline"
+            className="text-sm text-brand-400 hover:underline"
           >
             + Add vehicle
           </button>

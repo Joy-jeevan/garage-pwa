@@ -1,6 +1,6 @@
-# Garage Services Management PWA
+# Al Tabadul – Garage Services Management PWA
 
-A Progressive Web Application for vehicle garage / workshop management.
+Progressive Web Application for **Al Tabadul Auto Maintenance Workshop**
 
 **Hosting target:** Cloudflare (Pages + Workers)  
 **Stack:** Hono + React + Vite + Neon + Cloudflare R2 + Simple JWT Auth

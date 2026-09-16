@@ -59,14 +59,21 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col">
       {!isAuthPage && (
-        <header className="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-40">
+        <header className="border-b border-slate-800/80 bg-charcoal-dark/95 backdrop-blur sticky top-0 z-40">
           <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 gap-4">
             <div className="flex items-center gap-3 min-w-0">
               <Link
                 to="/"
-                className="text-lg font-semibold tracking-tight shrink-0"
+                className="flex items-center gap-2 shrink-0 min-w-0"
               >
-                Garage Manager
+                <img
+                  src="/brand/logo.jpeg"
+                  alt="Al Tabadul"
+                  className="h-8 w-auto rounded-sm object-contain max-w-[140px] sm:max-w-[180px]"
+                />
+                <span className="hidden sm:inline text-sm font-semibold tracking-tight text-slate-100 truncate">
+                  Al Tabadul
+                </span>
               </Link>
               {user && (
                 <nav className="hidden md:flex items-center gap-1 overflow-x-auto">
@@ -96,7 +103,7 @@ function App() {
                 !isLoading && (
                   <Link
                     to="/login"
-                    className="rounded-md bg-sky-600 px-4 py-1.5 text-sm font-medium hover:bg-sky-500 transition"
+                    className="rounded-md bg-brand-600 px-4 py-1.5 text-sm font-medium hover:bg-brand-500 transition"
                   >
                     Sign in
                   </Link>

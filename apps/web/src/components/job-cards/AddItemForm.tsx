@@ -71,7 +71,7 @@ export default function AddItemForm({ jobCardId, onClose, onSuccess }: Props) {
               onChange={(e) =>
                 setType(e.target.value as "labor" | "part" | "other")
               }
-              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500"
+              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500"
             >
               <option value="labor">Labor</option>
               <option value="part">Part</option>
@@ -94,7 +94,7 @@ export default function AddItemForm({ jobCardId, onClose, onSuccess }: Props) {
                     ? "e.g. Oil filter"
                     : "Description"
               }
-              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
             />
           </div>
 
@@ -109,7 +109,7 @@ export default function AddItemForm({ jobCardId, onClose, onSuccess }: Props) {
                 step="0.01"
                 value={quantity}
                 onChange={(e) => setQuantity(e.target.value)}
-                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
               />
             </div>
             <div>
@@ -123,7 +123,7 @@ export default function AddItemForm({ jobCardId, onClose, onSuccess }: Props) {
                 required
                 value={unitPrice}
                 onChange={(e) => setUnitPrice(e.target.value)}
-                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
               />
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function AddItemForm({ jobCardId, onClose, onSuccess }: Props) {
                 step="0.25"
                 value={hours}
                 onChange={(e) => setHours(e.target.value)}
-                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
               />
             </div>
           )}
@@ -155,7 +155,7 @@ export default function AddItemForm({ jobCardId, onClose, onSuccess }: Props) {
             <button
               type="submit"
               disabled={loading}
-              className="flex-1 rounded-md bg-sky-600 py-2 text-sm font-medium hover:bg-sky-500 disabled:opacity-50 transition"
+              className="flex-1 rounded-md bg-brand-600 py-2 text-sm font-medium hover:bg-brand-500 disabled:opacity-50 transition"
             >
               {loading ? "Adding..." : "Add item"}
             </button>

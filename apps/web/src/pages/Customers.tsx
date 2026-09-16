@@ -43,7 +43,7 @@ export default function Customers() {
         </div>
         <button
           onClick={() => setShowForm(true)}
-          className="rounded-md bg-sky-600 px-4 py-2 text-sm font-medium hover:bg-sky-500 transition"
+          className="rounded-md bg-brand-600 px-4 py-2 text-sm font-medium hover:bg-brand-500 transition"
         >
           + New Customer
         </button>
@@ -56,7 +56,7 @@ export default function Customers() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search by mobile or name..."
-          className="flex-1 rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+          className="flex-1 rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
         />
         <button
           type="submit"
@@ -86,7 +86,7 @@ export default function Customers() {
               <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <div className="font-medium text-slate-100">{c.fullName}</div>
-                  <div className="text-sm text-sky-400 font-mono">{c.mobile}</div>
+                  <div className="text-sm text-brand-400 font-mono">{c.mobile}</div>
                   {c.email && (
                     <div className="text-xs text-slate-500 mt-0.5">{c.email}</div>
                   )}

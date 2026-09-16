@@ -1,212 +1,157 @@
-# Design System – Garage Services Management PWA
+# Design System – Al Tabadul Auto Maintenance Workshop PWA
 
-**Version:** 1.0  
-**Last Updated:** August 2026  
-**Theme:** Dark (shop-floor friendly)
-
----
-
-## 1. Design Goals
-
-- Mobile-first and tablet-friendly (mechanics often use phones/tablets)
-- Fast, low-distraction UI for busy garage environments
-- Clear visual hierarchy and status indicators
-- Consistent spacing, typography, and component patterns
-- Accessible enough for daily professional use
-- Easy for AI tools to generate consistent UI
+**Version:** 2.0  
+**Last Updated:** September 2026  
+**Brand source:** Official workshop logo (Al Tabadul Auto. Maint W. Shop)  
+**Theme:** Dark charcoal + orange accent (shop-floor friendly)
 
 ---
 
-## 2. Color Palette
+## 1. Brand Identity
 
-### Base (Slate)
-| Token            | Hex       | Usage                          |
-|------------------|-----------|--------------------------------|
-| `bg-app`         | `#020617` | App background (slate-950)     |
-| `bg-surface`     | `#0f172a` | Cards, panels (slate-900)      |
-| `bg-elevated`    | `#1e293b` | Elevated surfaces (slate-800)  |
-| `border`         | `#1e293b` | Borders (slate-800)            |
-| `border-subtle`  | `#334155` | Subtle borders (slate-700)     |
-| `text-primary`   | `#f8fafc` | Main text (slate-50)           |
-| `text-secondary` | `#94a3b8` | Secondary text (slate-400)     |
-| `text-muted`     | `#64748b` | Muted text (slate-500)         |
+| Item | Value |
+|------|--------|
+| **Arabic name** | ورشة التبادل لصيانة السيارات |
+| **English name** | AL TABADUL AUTO. MAINT W. SHOP |
+| **Short name (UI)** | Al Tabadul |
+| **Logo file** | `/brand/logo.jpeg` |
+| **Logo layout** | Orange left panel (gear + wrench) · charcoal banner · white + orange typography |
 
-### Brand
-| Token         | Hex       | Usage                    |
-|---------------|-----------|--------------------------|
-| `brand-500`   | `#0ea5e9` | Primary actions (sky-500)|
-| `brand-600`   | `#0284c7` | Hover / active           |
-| `brand-400`   | `#38bdf8` | Links, highlights        |
+---
+
+## 2. Design Goals
+
+- Reflect official Al Tabadul branding (orange + charcoal)
+- Mobile-first and tablet-friendly for the shop floor
+- Fast, low-distraction UI
+- Clear status indicators
+- Consistent components for AI-assisted development
+
+---
+
+## 3. Color Palette (from logo)
+
+### Extracted logo colors
+| Role | RGB (approx) | Hex |
+|------|----------------|-----|
+| Brand orange (left panel / accents) | 243, 131, 33 | **`#F38321`** |
+| Brand orange deep | 224, 112, 16 | **`#E07010`** |
+| Brand orange light | 255, 154, 64 | **`#FF9A40`** |
+| Charcoal banner | 54, 55, 59 | **`#36373B`** |
+| Icon grey (on orange) | 72, 87, 90 | **`#48575A`** |
+| White | 255, 255, 255 | **`#FFFFFF`** |
+
+### App tokens
+| Token | Hex | Usage |
+|-------|-----|--------|
+| `bg-app` | `#121314` | App background |
+| `bg-surface` | `#1C1D20` | Header / elevated chrome |
+| `bg-card` | `#2A2B2F` | Cards, panels |
+| `bg-elevated` | `#36373B` | Inputs, elevated surfaces (logo charcoal) |
+| `border` | `#3F4045` | Default borders |
+| `border-subtle` | `#4A4B50` | Subtle dividers |
+| `text-primary` | `#F8FAFC` | Main text |
+| `text-secondary` | `#A1A1AA` | Secondary text |
+| `text-muted` | `#71717A` | Muted / helper |
+
+### Brand (primary actions & highlights)
+| Token | Hex | Tailwind | Usage |
+|-------|-----|----------|--------|
+| `brand-400` | `#FF9A40` | `brand-400` | Links, highlights, mono accents |
+| `brand-500` | `#F38321` | `brand-500` | Hover state, strong accent |
+| `brand-600` | `#E07010` | `brand-600` | Primary buttons |
+| `brand-700` | `#C45F0C` | `brand-700` | Active / pressed |
 
 ### Semantic / Status
-| Status           | Color     | Tailwind example      |
-|------------------|-----------|------------------------|
-| Draft            | slate     | `bg-slate-700`         |
-| Open             | sky       | `bg-sky-600`           |
-| In Progress      | amber     | `bg-amber-500`         |
-| Waiting Parts    | orange    | `bg-orange-500`        |
-| Completed        | emerald   | `bg-emerald-500`       |
-| Invoiced / Paid  | violet    | `bg-violet-500`        |
-| Closed           | slate     | `bg-slate-600`         |
-| Error / Danger   | red       | `bg-red-500`           |
-| Success          | emerald   | `bg-emerald-500`       |
-| Warning          | amber     | `bg-amber-500`         |
+| Status | Color approach |
+|--------|----------------|
+| Draft | slate / charcoal |
+| Open | **brand orange** (`bg-brand-600`) |
+| In Progress | amber |
+| Waiting Parts | orange-600 |
+| Completed | emerald |
+| Invoiced / Paid | violet |
+| Closed | charcoal |
+| Error | red |
+| Success | emerald |
 
 ### Priority
-| Priority | Color  |
+| Priority | Color |
 |----------|--------|
-| Low      | slate  |
-| Normal   | sky    |
-| High     | amber  |
-| Urgent   | red    |
+| Low | slate |
+| Normal | brand orange |
+| High | amber |
+| Urgent | red |
 
 ---
 
-## 3. Typography
+## 4. Typography
 
 - **Font family:** Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif
-- **Base size:** 14–16 px
-- **Scale:**
-  - Page title: `text-2xl` / `text-3xl` font-bold
-  - Section title: `text-lg` / `text-xl` font-semibold
-  - Body: `text-sm` / `text-base`
-  - Labels: `text-sm` font-medium
-  - Helper / muted: `text-xs` / `text-sm` text-slate-400
+- Arabic UI may later use a Noto Naskh / Tajawal stack if localized
+- **Scale:** page title `text-2xl`/`text-3xl` bold · section `text-lg` semibold · body `text-sm` · labels `text-sm` medium · muted `text-xs`/`text-sm`
 
 ---
 
-## 4. Spacing & Layout
+## 5. Spacing & Layout
 
-- Base unit: 4px (Tailwind default)
-- Page padding: `px-4 py-6` (mobile), `px-6 py-8` (desktop)
-- Card padding: `p-4` or `p-6`
-- Stack gap: `space-y-4` or `gap-4`
-- Max content width: `max-w-7xl` centered
+- Base unit: 4px (Tailwind)
+- Page padding: `px-4 py-6` (mobile), wider on desktop
+- Cards: `rounded-xl border border-slate-700/80 bg-[#2A2B2F]/80`
+- Max width: `max-w-7xl`
 
-### Layout Patterns
-
-**Desktop**
-- Left sidebar (collapsible) + main content
-- Top header with user info and quick actions
-
-**Mobile / Tablet**
-- Bottom navigation (Dashboard, Jobs, Customers, More)
-- Full-width content
-- Sticky action buttons where useful
+### Layout
+- **Desktop:** top header with logo + nav
+- **Mobile:** logo + bottom/top compact nav
+- Primary CTA buttons always **brand orange**
 
 ---
 
-## 5. Core Components
+## 6. Core Components
 
 ### Buttons
-- Primary: `bg-sky-600 hover:bg-sky-500 text-white`
-- Secondary: `border border-slate-700 hover:bg-slate-800`
-- Danger: `bg-red-600 hover:bg-red-500`
-- Sizes: `px-3 py-1.5 text-sm` (default), `px-4 py-2` (larger)
-- Disabled: `opacity-50 cursor-not-allowed`
+- **Primary:** `bg-brand-600 hover:bg-brand-500 text-white`
+- **Secondary:** `border border-slate-600 hover:bg-slate-800`
+- **Danger:** `border border-red-900/50 text-red-400`
 
 ### Inputs
-- Background: `bg-slate-950`
-- Border: `border-slate-700`
-- Focus: `focus:border-sky-500 focus:ring-1 focus:ring-sky-500`
-- Height: comfortable touch targets (`py-2`)
+- `bg-slate-950 border-slate-700 focus:border-brand-500 focus:ring-brand-500`
 
 ### Cards
-- `rounded-xl border border-slate-800 bg-slate-900/60`
-- Optional hover: `hover:border-slate-700`
+- Dark charcoal surfaces, subtle border, `rounded-xl`
 
-### Badges / Status Pills
-- Small rounded pills with semantic colors
-- Example: `rounded-full px-2.5 py-0.5 text-xs font-medium`
+### Status pills
+- Use semantic colors; **Open** uses brand orange
 
-### Tables / Lists
-- Prefer card-based lists on mobile
-- Compact tables on desktop
-- Clear empty states
-
-### Photo Gallery
-- Grid of thumbnails (2–3 columns on mobile)
-- Clear “Entry” vs “Exit” sections
-- Upload button with camera icon support
+### Logo usage
+- Header: logo image (height ~32–40px) + short name “Al Tabadul”
+- Login/Register: full logo banner where space allows
+- Favicon / PWA icons: derive from gear+wrench mark (future)
 
 ---
 
-## 6. Navigation Structure
+## 7. Navigation Structure
 
-### Primary (Desktop Sidebar)
-- Dashboard
-- Job Cards
-- Customers
-- Vehicles
-- Inventory
-- Invoices
-- Settings (Admin)
-
-### Mobile Bottom Nav
-- Home / Dashboard
-- Jobs
-- Customers
-- More (Vehicles, Inventory, Invoices, Settings)
+- Dashboard · Jobs · Customers · Vehicles · Invoices
+- Brand mark always visible in header
 
 ---
 
-## 7. Key Screens (Design Notes)
-
-| Screen              | Notes |
-|---------------------|-------|
-| Login / Register    | Centered card, minimal distraction |
-| Dashboard           | Counters + today’s jobs + low stock |
-| Customers list      | Search by mobile prominently |
-| Customer detail     | Vehicles + job history |
-| Job Card detail     | Status, items, notes, photo sections |
-| Photo upload        | Clear Entry / Exit tabs or sections |
-| Inventory           | List + low-stock highlighting |
-
----
-
-## 8. Iconography
-
-- Prefer simple, consistent icons (Lucide React recommended)
-- Keep icons small and paired with labels on mobile where space allows
-
----
-
-## 9. Motion & Feedback
-
-- Subtle transitions (`transition` on buttons and cards)
-- Loading spinners or skeletons for data fetching
-- Toast notifications for success/error (to be added)
-- Optimistic UI where safe (status changes)
-
----
-
-## 10. Accessibility Basics
-
-- Sufficient contrast (dark theme already helps)
-- Focus rings on interactive elements
-- Labels on all form fields
-- Touch targets ≥ 44px where possible
-- Do not rely on color alone for status
-
----
-
-## 11. AI Generation Guidelines (Design)
+## 8. AI Generation Guidelines
 
 When generating UI:
 
-1. Always use the dark slate palette above
-2. Prefer `rounded-xl` cards and `text-sm` body text
-3. Use semantic status colors for job states
-4. Mobile-first: design for phone, then enhance for desktop
-5. Keep forms simple and stacked on mobile
-6. Match existing patterns in `App.tsx` and page components
-7. Reference this file (`docs/06-design.md`) before creating new screens
+1. Prefer **brand orange** (`brand-500` / `brand-600`) over sky/blue for primary actions and links
+2. Backgrounds stay **charcoal / near-black**, not pure black only
+3. Mobile numbers and plates use `font-mono text-brand-400`
+4. Reference this file and the logo at `/brand/logo.jpeg`
+5. Do not reintroduce sky-blue as the primary brand color
 
 ---
 
-## 12. Future Design Additions
+## 9. Future Design Additions
 
-- Light theme toggle (optional)
-- shadcn/ui component adoption
-- Print-friendly invoice styles
-- Photo comparison (before/after side-by-side)
+- Light theme (optional)
+- Arabic RTL layout
+- Official PWA icons cropped from logo mark
+- Print invoice letterhead with logo

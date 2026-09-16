@@ -1,5 +1,5 @@
-export const APP_NAME = "Garage Manager";
-export const APP_DESCRIPTION = "Vehicle Garage Services Management";
+export const APP_NAME = "Al Tabadul";
+export const APP_DESCRIPTION = "Al Tabadul Auto Maintenance Workshop";
 
 export const USER_ROLES = ["admin", "manager", "mechanic"] as const;
 export type UserRole = (typeof USER_ROLES)[number];

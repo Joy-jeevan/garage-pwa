@@ -137,7 +137,7 @@ export default function InvoiceDetailPage() {
               </button>
               <button
                 onClick={() => setShowPay(true)}
-                className="rounded-md bg-sky-600 px-3 py-1.5 text-sm font-medium hover:bg-sky-500"
+                className="rounded-md bg-brand-600 px-3 py-1.5 text-sm font-medium hover:bg-brand-500"
               >
                 Record payment
               </button>
@@ -157,7 +157,7 @@ export default function InvoiceDetailPage() {
           <div className="text-xs text-slate-500 mb-1">Bill to</div>
           <Link
             to={`/customers/${inv.customer.id}`}
-            className="font-medium text-sky-400 hover:underline"
+            className="font-medium text-brand-400 hover:underline"
           >
             {inv.customer.fullName}
           </Link>
@@ -174,7 +174,7 @@ export default function InvoiceDetailPage() {
           <div className="text-xs text-slate-500 mb-1">Job / Vehicle</div>
           <Link
             to={`/job-cards/${inv.jobCard.id}`}
-            className="font-mono text-sky-400 hover:underline text-sm"
+            className="font-mono text-brand-400 hover:underline text-sm"
           >
             {inv.jobCard.jobNumber}
           </Link>
@@ -332,7 +332,7 @@ export default function InvoiceDetailPage() {
               <button
                 onClick={() => payMutation.mutate()}
                 disabled={payMutation.isPending || !amount}
-                className="flex-1 rounded-md bg-sky-600 py-2 text-sm font-medium disabled:opacity-50"
+                className="flex-1 rounded-md bg-brand-600 py-2 text-sm font-medium disabled:opacity-50"
               >
                 Save
               </button>

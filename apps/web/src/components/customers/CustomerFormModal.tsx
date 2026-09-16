@@ -85,7 +85,7 @@ export default function CustomerFormModal({
               required
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
-              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
             />
           </div>
 
@@ -98,7 +98,7 @@ export default function CustomerFormModal({
               value={mobile}
               onChange={(e) => setMobile(e.target.value)}
               placeholder="e.g. 9876543210"
-              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 font-mono"
+              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 font-mono"
             />
           </div>
 
@@ -110,7 +110,7 @@ export default function CustomerFormModal({
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
             />
           </div>
 
@@ -122,7 +122,7 @@ export default function CustomerFormModal({
               value={address}
               onChange={(e) => setAddress(e.target.value)}
               rows={2}
-              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
             />
           </div>
 
@@ -134,7 +134,7 @@ export default function CustomerFormModal({
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               rows={2}
-              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
             />
           </div>
 
@@ -149,7 +149,7 @@ export default function CustomerFormModal({
             <button
               type="submit"
               disabled={loading}
-              className="flex-1 rounded-md bg-sky-600 py-2 text-sm font-medium hover:bg-sky-500 disabled:opacity-50 transition"
+              className="flex-1 rounded-md bg-brand-600 py-2 text-sm font-medium hover:bg-brand-500 disabled:opacity-50 transition"
             >
               {loading ? "Saving..." : isEdit ? "Save changes" : "Create"}
             </button>

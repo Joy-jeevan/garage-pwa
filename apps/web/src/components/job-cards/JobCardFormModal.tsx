@@ -119,7 +119,7 @@ export default function JobCardFormModal({ onClose, onSuccess }: Props) {
                 setCustomerId("");
               }}
               placeholder="Type mobile or name..."
-              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
             />
             {!customerId && customerSearch && customers.length > 0 && (
               <div className="mt-1 max-h-36 overflow-y-auto rounded-md border border-slate-700 bg-slate-950">
@@ -134,7 +134,7 @@ export default function JobCardFormModal({ onClose, onSuccess }: Props) {
                     className="w-full text-left px-3 py-2 text-sm hover:bg-slate-800 border-b border-slate-800 last:border-0"
                   >
                     <span className="font-medium">{c.fullName}</span>
-                    <span className="text-sky-400 font-mono ml-2 text-xs">
+                    <span className="text-brand-400 font-mono ml-2 text-xs">
                       {c.mobile}
                     </span>
                   </button>
@@ -161,7 +161,7 @@ export default function JobCardFormModal({ onClose, onSuccess }: Props) {
                   required
                   value={vehicleId}
                   onChange={(e) => setVehicleId(e.target.value)}
-                  className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                  className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500"
                 >
                   <option value="">Select vehicle...</option>
                   {vehicles.map((v) => (
@@ -183,7 +183,7 @@ export default function JobCardFormModal({ onClose, onSuccess }: Props) {
               onChange={(e) => setDescription(e.target.value)}
               rows={3}
               placeholder="Customer complaint / requested work..."
-              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
             />
           </div>
 
@@ -195,7 +195,7 @@ export default function JobCardFormModal({ onClose, onSuccess }: Props) {
               <select
                 value={priority}
                 onChange={(e) => setPriority(e.target.value)}
-                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500"
               >
                 <option value="low">Low</option>
                 <option value="normal">Normal</option>
@@ -212,7 +212,7 @@ export default function JobCardFormModal({ onClose, onSuccess }: Props) {
                 min={0}
                 value={mileageIn}
                 onChange={(e) => setMileageIn(e.target.value)}
-                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
               />
             </div>
           </div>
@@ -225,7 +225,7 @@ export default function JobCardFormModal({ onClose, onSuccess }: Props) {
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               rows={2}
-              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
             />
           </div>
 
@@ -240,7 +240,7 @@ export default function JobCardFormModal({ onClose, onSuccess }: Props) {
             <button
               type="submit"
               disabled={loading}
-              className="flex-1 rounded-md bg-sky-600 py-2 text-sm font-medium hover:bg-sky-500 disabled:opacity-50 transition"
+              className="flex-1 rounded-md bg-brand-600 py-2 text-sm font-medium hover:bg-brand-500 disabled:opacity-50 transition"
             >
               {loading ? "Creating..." : "Create Job Card"}
             </button>

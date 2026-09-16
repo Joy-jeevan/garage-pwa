@@ -3,7 +3,7 @@
 **Purpose:** Single source of truth for progress.  
 **AI Instruction:** Update after every meaningful change. Read at session start.
 
-**Last Updated:** August 2026 (Invoicing + Dashboard + Deploy/PWA docs)
+**Last Updated:** September 2026 (Brand colors from Al Tabadul logo)
 
 ---
 

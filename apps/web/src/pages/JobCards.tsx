@@ -39,7 +39,7 @@ export default function JobCards() {
         </div>
         <button
           onClick={() => setShowForm(true)}
-          className="rounded-md bg-sky-600 px-4 py-2 text-sm font-medium hover:bg-sky-500 transition"
+          className="rounded-md bg-brand-600 px-4 py-2 text-sm font-medium hover:bg-brand-500 transition"
         >
           + New Job Card
         </button>
@@ -52,7 +52,7 @@ export default function JobCards() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search job #, plate, customer, mobile..."
-            className="flex-1 rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+            className="flex-1 rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
           />
           <button
             type="submit"
@@ -64,7 +64,7 @@ export default function JobCards() {
         <select
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value)}
-          className="rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500"
+          className="rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500"
         >
           <option value="">All statuses</option>
           {ALL_STATUSES.map((s) => (
@@ -110,7 +110,7 @@ export default function JobCards() {
                   </div>
                   <div className="mt-1 text-sm text-slate-300">
                     {j.vehicle.make} {j.vehicle.model} ·{" "}
-                    <span className="font-mono text-sky-400">
+                    <span className="font-mono text-brand-400">
                       {j.vehicle.plateNumber}
                     </span>
                   </div>

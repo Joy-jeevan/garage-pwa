@@ -18,7 +18,7 @@ type InvoiceListItem = {
 
 const STATUS_STYLE: Record<string, string> = {
   draft: "bg-slate-700",
-  sent: "bg-sky-600",
+  sent: "bg-brand-600",
   paid: "bg-emerald-500",
   cancelled: "bg-red-900/50 text-red-300",
 };

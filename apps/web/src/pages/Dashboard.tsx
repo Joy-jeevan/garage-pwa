@@ -81,7 +81,7 @@ export default function Dashboard() {
           label="Open"
           value={stats.openJobs}
           to="/job-cards?status=open"
-          accent="text-sky-400"
+          accent="text-brand-400"
         />
         <StatCard
           label="In Progress"
@@ -109,7 +109,7 @@ export default function Dashboard() {
         <section>
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-lg font-semibold">Recent Job Cards</h2>
-            <Link to="/job-cards" className="text-sm text-sky-400 hover:underline">
+            <Link to="/job-cards" className="text-sm text-brand-400 hover:underline">
               View all
             </Link>
           </div>
@@ -149,7 +149,7 @@ export default function Dashboard() {
         <section>
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-lg font-semibold">Unpaid Invoices</h2>
-            <Link to="/invoices" className="text-sm text-sky-400 hover:underline">
+            <Link to="/invoices" className="text-sm text-brand-400 hover:underline">
               View all
             </Link>
           </div>
@@ -185,7 +185,7 @@ export default function Dashboard() {
       <section className="flex flex-wrap gap-2">
         <Link
           to="/job-cards"
-          className="rounded-md bg-sky-600 px-4 py-2 text-sm font-medium hover:bg-sky-500 transition"
+          className="rounded-md bg-brand-600 px-4 py-2 text-sm font-medium hover:bg-brand-500 transition"
         >
           + New Job
         </Link>
