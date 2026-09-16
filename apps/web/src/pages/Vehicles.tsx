@@ -43,7 +43,7 @@ export default function Vehicles() {
         </div>
         <button
           onClick={() => setShowForm(true)}
-          className="rounded-md bg-sky-600 px-4 py-2 text-sm font-medium hover:bg-sky-500 transition"
+          className="rounded-md bg-brand-600 px-4 py-2 text-sm font-medium hover:bg-brand-500 transition"
         >
           + New Vehicle
         </button>
@@ -55,7 +55,7 @@ export default function Vehicles() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search by plate, make, model, or customer..."
-          className="flex-1 rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+          className="flex-1 rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
         />
         <button
           type="submit"
@@ -87,7 +87,7 @@ export default function Vehicles() {
                     {v.make} {v.model}
                     {v.year ? ` (${v.year})` : ""}
                   </div>
-                  <div className="text-sm text-sky-400 font-mono mt-0.5">
+                  <div className="text-sm text-brand-400 font-mono mt-0.5">
                     {v.plateNumber}
                   </div>
                   {v.customer && (

@@ -5,7 +5,6 @@ function getJwtSecret(): Uint8Array {
   const secret =
     (typeof process !== "undefined" && process.env.JWT_SECRET) ||
     "dev-secret-change-me-in-production";
-    console.log("JWT_SECRET:", secret);
   return new TextEncoder().encode(secret);
 }
 

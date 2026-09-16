@@ -122,7 +122,7 @@ export default function JobCardDetailPage() {
               statusMutation.mutate(e.target.value as JobStatus)
             }
             disabled={statusMutation.isPending}
-            className="rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-sm outline-none focus:border-sky-500"
+            className="rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-sm outline-none focus:border-brand-500"
           >
             {ALL_STATUSES.map((s) => (
               <option key={s} value={s}>
@@ -162,7 +162,7 @@ export default function JobCardDetailPage() {
           <div className="text-xs text-slate-500 mb-1">Customer</div>
           <Link
             to={`/customers/${job.customer.id}`}
-            className="font-medium text-sky-400 hover:underline"
+            className="font-medium text-brand-400 hover:underline"
           >
             {job.customer.fullName}
           </Link>
@@ -174,7 +174,7 @@ export default function JobCardDetailPage() {
           <div className="text-xs text-slate-500 mb-1">Vehicle</div>
           <Link
             to={`/vehicles/${job.vehicle.id}`}
-            className="font-medium text-sky-400 hover:underline"
+            className="font-medium text-brand-400 hover:underline"
           >
             {job.vehicle.make} {job.vehicle.model}
             {job.vehicle.year ? ` (${job.vehicle.year})` : ""}
@@ -212,7 +212,7 @@ export default function JobCardDetailPage() {
           <h2 className="text-lg font-semibold">Labor & Parts</h2>
           <button
             onClick={() => setShowAddItem(true)}
-            className="text-sm text-sky-400 hover:underline"
+            className="text-sm text-brand-400 hover:underline"
           >
             + Add item
           </button>

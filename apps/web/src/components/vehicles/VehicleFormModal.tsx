@@ -155,7 +155,7 @@ export default function VehicleFormModal({
                   setCustomerId("");
                 }}
                 placeholder="Type mobile or name..."
-                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
               />
               {customerSearch && !customerId && customers.length > 0 && (
                 <div className="mt-1 max-h-40 overflow-y-auto rounded-md border border-slate-700 bg-slate-950">
@@ -170,7 +170,7 @@ export default function VehicleFormModal({
                       className="w-full text-left px-3 py-2 text-sm hover:bg-slate-800 border-b border-slate-800 last:border-0"
                     >
                       <span className="font-medium">{c.fullName}</span>
-                      <span className="text-sky-400 font-mono ml-2 text-xs">
+                      <span className="text-brand-400 font-mono ml-2 text-xs">
                         {c.mobile}
                       </span>
                     </button>
@@ -202,7 +202,7 @@ export default function VehicleFormModal({
                 value={make}
                 onChange={(e) => setMake(e.target.value)}
                 placeholder="Toyota"
-                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
               />
             </div>
             <div>
@@ -214,7 +214,7 @@ export default function VehicleFormModal({
                 value={model}
                 onChange={(e) => setModel(e.target.value)}
                 placeholder="Corolla"
-                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
               />
             </div>
           </div>
@@ -229,7 +229,7 @@ export default function VehicleFormModal({
                 value={plateNumber}
                 onChange={(e) => setPlateNumber(e.target.value.toUpperCase())}
                 placeholder="ABC-1234"
-                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 font-mono"
+                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 font-mono"
               />
             </div>
             <div>
@@ -243,7 +243,7 @@ export default function VehicleFormModal({
                 value={year}
                 onChange={(e) => setYear(e.target.value)}
                 placeholder="2020"
-                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
               />
             </div>
           </div>
@@ -256,7 +256,7 @@ export default function VehicleFormModal({
               <input
                 value={color}
                 onChange={(e) => setColor(e.target.value)}
-                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
               />
             </div>
             <div>
@@ -268,7 +268,7 @@ export default function VehicleFormModal({
                 min={0}
                 value={currentMileage}
                 onChange={(e) => setCurrentMileage(e.target.value)}
-                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
               />
             </div>
           </div>
@@ -280,7 +280,7 @@ export default function VehicleFormModal({
             <input
               value={vin}
               onChange={(e) => setVin(e.target.value)}
-              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 font-mono"
+              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 font-mono"
             />
           </div>
 
@@ -292,7 +292,7 @@ export default function VehicleFormModal({
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               rows={2}
-              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+              className="w-full rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
             />
           </div>
 
@@ -307,7 +307,7 @@ export default function VehicleFormModal({
             <button
               type="submit"
               disabled={loading}
-              className="flex-1 rounded-md bg-sky-600 py-2 text-sm font-medium hover:bg-sky-500 disabled:opacity-50 transition"
+              className="flex-1 rounded-md bg-brand-600 py-2 text-sm font-medium hover:bg-brand-500 disabled:opacity-50 transition"
             >
               {loading ? "Saving..." : isEdit ? "Save changes" : "Create"}
             </button>

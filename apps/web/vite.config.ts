@@ -10,11 +10,11 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.svg", "robots.txt"],
       manifest: {
-        name: "Garage Manager",
-        short_name: "Garage",
-        description: "Vehicle Garage Services Management",
-        theme_color: "#0f172a",
-        background_color: "#0f172a",
+        name: "Al Tabadul Auto Maintenance",
+        short_name: "Al Tabadul",
+        description: "Al Tabadul Auto Maintenance Workshop management",
+        theme_color: "#E07010",
+        background_color: "#121314",
         display: "standalone",
         start_url: "/",
         icons: [

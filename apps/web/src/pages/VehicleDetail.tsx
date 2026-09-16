@@ -58,7 +58,7 @@ export default function VehicleDetailPage() {
             {vehicle.make} {vehicle.model}
             {vehicle.year ? ` (${vehicle.year})` : ""}
           </h1>
-          <p className="text-sky-400 font-mono text-lg mt-1">
+          <p className="text-brand-400 font-mono text-lg mt-1">
             {vehicle.plateNumber}
           </p>
           <div className="mt-2 text-sm text-slate-400 space-y-0.5">
@@ -96,7 +96,7 @@ export default function VehicleDetailPage() {
         <div className="text-xs text-slate-500 mb-1">Owner</div>
         <Link
           to={`/customers/${vehicle.customer.id}`}
-          className="font-medium text-sky-400 hover:underline"
+          className="font-medium text-brand-400 hover:underline"
         >
           {vehicle.customer.fullName}
         </Link>

@@ -11,17 +11,32 @@ const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
 };
 
+function isNodeRuntime(): boolean {
+  return (
+    typeof process !== "undefined" &&
+    !!process.versions?.node &&
+    typeof globalThis.navigator === "undefined" &&
+    typeof globalThis.WorkerGlobalScope === "undefined"
+  );
+}
+
 /** Standard client for Node.js environments (scripts, local tools) */
 export const prisma =
   globalForPrisma.prisma ??
-  new PrismaClient({
-    log:
-      process.env.NODE_ENV === "development"
-        ? ["error", "warn"]
-        : ["error"],
-  });
+  (isNodeRuntime()
+    ? new PrismaClient({
+        log:
+          process.env.NODE_ENV === "development"
+            ? ["error", "warn"]
+            : ["error"],
+      })
+    : (() => {
+        throw new Error(
+          "Prisma edge runtime requires createPrismaClient(connectionString)"
+        );
+      })());
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV !== "production" && globalForPrisma.prisma) {
   globalForPrisma.prisma = prisma;
 }
 
@@ -33,8 +48,11 @@ export async function createPrismaClient(connectionString: string) {
   const { PrismaNeon } = await import("@prisma/adapter-neon");
   const { Pool, neonConfig } = await import("@neondatabase/serverless");
 
-  // Required for Cloudflare Workers
-  neonConfig.webSocketConstructor = (await import("ws")).default;
+  if (typeof WebSocket !== "undefined") {
+    neonConfig.webSocketConstructor = WebSocket;
+  } else {
+    neonConfig.webSocketConstructor = (await import("ws")).default;
+  }
 
   const pool = new Pool({ connectionString });
   const adapter = new PrismaNeon(pool);

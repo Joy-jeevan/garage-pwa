@@ -149,7 +149,7 @@ export default function PhotoSection({ jobId, images }: Props) {
               type="button"
               disabled={uploading === category}
               onClick={() => inputRef.current?.click()}
-              className="text-sm text-sky-400 hover:underline disabled:opacity-50"
+              className="text-sm text-brand-400 hover:underline disabled:opacity-50"
             >
               {uploading === category ? "Uploading..." : "+ Add photos"}
             </button>

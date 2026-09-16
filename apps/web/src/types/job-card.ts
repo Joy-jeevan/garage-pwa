@@ -89,7 +89,7 @@ export const STATUS_LABELS: Record<JobStatus, string> = {
 
 export const STATUS_COLORS: Record<JobStatus, string> = {
   draft: "bg-slate-700 text-slate-200",
-  open: "bg-sky-600 text-white",
+  open: "bg-brand-600 text-white",
   in_progress: "bg-amber-500 text-slate-900",
   waiting_parts: "bg-orange-500 text-white",
   completed: "bg-emerald-500 text-white",
