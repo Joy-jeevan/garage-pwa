@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { api } from "../lib/api";
-import type { JobCardListItem, JobStatus } from "../types/job-card";
+import type { JobCardListItem } from "../types/job-card";
 import { STATUS_COLORS, STATUS_LABELS, ALL_STATUSES } from "../types/job-card";
 import JobCardFormModal from "../components/job-cards/JobCardFormModal";
 
