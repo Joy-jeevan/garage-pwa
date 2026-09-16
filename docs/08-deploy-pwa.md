@@ -69,6 +69,10 @@ Update CORS in `apps/api/src/index.ts` to include your production frontend origi
 4. Environment variable:
    - `VITE_API_URL` = your Worker URL (no trailing slash)
 
+For Git-connected Pages builds, set `VITE_API_URL` under the Pages project
+settings for the Production environment. The frontend also defaults to the
+current production Worker URL when this variable is missing.
+
 ### Option B – Wrangler Pages
 
 ```bash
