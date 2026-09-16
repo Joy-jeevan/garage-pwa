@@ -24,7 +24,7 @@ app.use("*", logger());
 app.use(
   "*",
   cors({
-    origin: ["http://localhost:5173", "http://127.0.0.1:5173", "https://al-tabadul.pages.dev/"],
+    origin: ["http://localhost:5173", "http://127.0.0.1:5173", "https://al-tabadul.pages.dev"],
     allowMethods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowHeaders: ["Content-Type", "Authorization"],
     credentials: true,
